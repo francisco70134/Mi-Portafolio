@@ -45,9 +45,52 @@ body {
 }
 
 /* Texto degradado (Morado -> Rosa -> Azul) */
+/* Texto degradado (Elegante: Lila claro a Morado profundo) */
 .gradient-text {
-  background: linear-gradient(135deg, #aa00ff 0%, #ff00aa 50%, #00aaff 100%);
+  background: linear-gradient(135deg, #a761f3 0%, #9333ea 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* Luces de ambiente (Morado arriba, Azul/Rosa abajo) */
+.aurora-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background:
+    radial-gradient(ellipse at top left, rgba(170, 0, 255, 0.18) 0%, transparent 40%),
+    radial-gradient(ellipse at bottom right, rgba(0, 170, 255, 0.15) 0%, transparent 40%),
+    radial-gradient(ellipse at bottom left, rgba(255, 0, 170, 0.1) 0%, transparent 40%);
+  pointer-events: none;
+  opacity: 0.8;
+  z-index: 0;
+}
+
+.premium-grid {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  /* Se difumina hacia abajo para que no sature la pantalla */
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 20%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 20%, transparent 100%);
+  z-index: 0;
+}
+
+.spotlight-effect {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    800px circle at var(--x, 50vw) var(--y, 50vh),
+    rgba(147, 51, 234, 0.12), /* Morado elegante */
+    transparent 80%
+  );
+  z-index: 1;
 }
