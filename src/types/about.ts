@@ -3,8 +3,13 @@ export interface Stat {
   label: string;
 }
 
-export interface AboutData {
+export interface AboutContent {
   title: string;
   paragraphs: string[];
   stats: Stat[];
+}
+
+export interface AboutData {
+  es: AboutContent;
+  en: AboutContent;
 }

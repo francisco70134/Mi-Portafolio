@@ -1,9 +1,16 @@
-export interface HeroData {
+export interface HeroContent {
   greeting: string;
-  name: string;
   roles: string[];
   description: string;
-  resumeUrl: string;
+  btnWork: string;
+  btnResume: string;
+}
+
+export interface HeroData {
+  name: string;      // Fijo
+  resumeUrl: string; // Fijo
+  es: HeroContent;   // Traducción español
+  en: HeroContent;   // Traducción inglés
 }
 
 export interface SocialLink {

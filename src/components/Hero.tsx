@@ -1,8 +1,16 @@
-// Eliminamos la importación de lucide-react y usamos react-icons/fa
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
-import { heroInfo, socialLinks } from "../data";
+// src/components/Hero.tsx
+import { FaGithub, FaLinkedin, FaTwitter,  } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
+import { heroInfo } from "../data";
 
 export const Hero = () => {
+  // 1. Obtenemos el idioma actual
+  const { i18n } = useTranslation();
+
+  // 2. Extraemos la información correcta según el idioma
+  const currentLang = (i18n.language || "es") as "es" | "en";
+  const content = heroInfo[currentLang];
+
   return (
     <section
       id="home"
@@ -11,36 +19,34 @@ export const Hero = () => {
       <div className="container mx-auto px-6 text-center z-10">
         <div className="animate-slide-up">
           <h1 className="text-5xl md:text-7xl font-bold mb-4">
-            {heroInfo.greeting}{" "}
-            <span className="gradient-text font-mono">{heroInfo.name}</span>
+            {content.greeting}{" "}
+            <span className="gradient-text">{heroInfo.name}</span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 font-semibold">
-            {heroInfo.roles.join(" | ")}
+          <p className="text-xl md:text-2xl text-gray-400 mb-8">
+            {/* Volvemos a unir el arreglo de roles con el separador */}
+            {content.roles.join(" | ")}
           </p>
 
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-12 font-mono">
-            {heroInfo.description}
+          <p className="text-lg text-gray-500 max-w-2xl mx-auto mb-12 font-mono">
+            {content.description}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#portfolio"
-              // Cambiamos a un degradado morado elegante y suavizamos la sombra
-              className="px-8 py-3 bg-gradient-to-r from-aurora-purple-dark to-aurora-purple rounded-full text-white font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all transform hover:scale-105"
+              className="px-8 py-3 bg-gradient-to-r from-aurora-purple-dark to-aurora-purple rounded-full text-white font-medium hover:shadow-lg hover:shadow-aurora-purple-dark/50 transition-all transform hover:scale-105"
             >
-              Ver mi Trabajo
+              {content.btnWork}
             </a>
             <a
               href={heroInfo.resumeUrl}
-              // Aclaramos el texto por defecto (text-gray-300) para que no se pierda
               className="px-8 py-3 border border-aurora-purple rounded-full text-gray-300 hover:bg-aurora-purple hover:text-white transition-all transform hover:scale-105"
             >
-              Descargar CV
+              {content.btnResume}
             </a>
           </div>
 
-          {/* Redes Sociales con react-icons */}
           <div className="mt-12 flex justify-center space-x-6">
             <a
               href="#"
@@ -60,17 +66,12 @@ export const Hero = () => {
             >
               <FaTwitter size={28} />
             </a>
-            <a
-              href="#"
-              className="text-gray-400 hover:text-aurora-purple transition transform hover:scale-110"
-            >
-              <FaInstagram size={28} />
-            </a>
+            
           </div>
         </div>
       </div>
 
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none hidden md:block">
         <div
           className="absolute w-2 h-2 bg-aurora-purple rounded-full animate-float"
           style={{ top: "20%", left: "10%" }}
