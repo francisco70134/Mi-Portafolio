@@ -1,12 +1,25 @@
-export interface Stat {
-  value: string;
+export interface PersonalDetail {
   label: string;
+  value: string;
+}
+
+export interface TechTool {
+  name: string;
+  icon: string;
+}
+
+export interface TechCategory {
+  id: string;
+  name: string;
+  tools: TechTool[];
 }
 
 export interface AboutContent {
   title: string;
-  paragraphs: string[];
-  stats: Stat[];
+  bio: string[];
+  details: PersonalDetail[];
+  techTitle: string;
+  techCategories: TechCategory[];
 }
 
 export interface AboutData {

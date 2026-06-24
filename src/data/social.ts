@@ -1,9 +1,24 @@
-// src/data/social.ts
 import type { SocialLink } from "../types";
 
-export const socialLinks: SocialLink[] = [
-  { platform: "github", url: "https://github.com/tu-usuario" },
-  { platform: "linkedin", url: "https://linkedin.com/in/tu-usuario" },
-  { platform: "twitter", url: "https://twitter.com/tu-usuario" },
-  { platform: "instagram", url: "https://instagram.com/tu-usuario" },
-];
+export const socialLinks: Record<string, SocialLink> = {
+  github: {
+    platform: "github",
+    url: "https://github.com/francisco70134",
+  },
+  linkedin: {
+    platform: "linkedin",
+    url: "https://www.linkedin.com/in/francisco-edu-olortegui-abanto/",
+  },
+  twitter: {
+    platform: "twitter",
+    url: "https://twitter.com/tu-usuario",
+  },
+  instagram: {
+    platform: "instagram",
+    url: "https://instagram.com/tu-usuario",
+  },
+  correo: {
+    platform: "correo",
+    url: "mailto:francisco.olortegui1@gmail.com",
+  },
+};

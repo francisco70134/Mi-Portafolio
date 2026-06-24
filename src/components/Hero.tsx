@@ -1,15 +1,17 @@
-// src/components/Hero.tsx
-import { FaGithub, FaLinkedin, FaTwitter,  } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import { heroInfo } from "../data";
+import { socialLinks } from "../data/social";
 
 export const Hero = () => {
-  // 1. Obtenemos el idioma actual
+  //Obtenemos el idioma actual
   const { i18n } = useTranslation();
 
-  // 2. Extraemos la información correcta según el idioma
+  //Extraemos la información correcta según el idioma
   const currentLang = (i18n.language || "es") as "es" | "en";
   const content = heroInfo[currentLang];
+
+  const socialLink = socialLinks;
 
   return (
     <section
@@ -23,12 +25,12 @@ export const Hero = () => {
             <span className="gradient-text">{heroInfo.name}</span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-gray-400 mb-8">
+          <p className="text-xl md:text-2xl text-gray-300 mb-8">
             {/* Volvemos a unir el arreglo de roles con el separador */}
             {content.roles.join(" | ")}
           </p>
 
-          <p className="text-lg text-gray-500 max-w-2xl mx-auto mb-12 font-mono">
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-12 font-mono">
             {content.description}
           </p>
 
@@ -47,26 +49,27 @@ export const Hero = () => {
             </a>
           </div>
 
+          {/* Redes sociales */}
+
           <div className="mt-12 flex justify-center space-x-6">
             <a
-              href="#"
+              href={socialLink.github.url}
               className="text-gray-400 hover:text-aurora-purple transition transform hover:scale-110"
             >
               <FaGithub size={28} />
             </a>
             <a
-              href="#"
+              href={socialLink.linkedin.url}
               className="text-gray-400 hover:text-aurora-blue transition transform hover:scale-110"
             >
               <FaLinkedin size={28} />
             </a>
             <a
-              href="#"
-              className="text-gray-400 hover:text-aurora-pink transition transform hover:scale-110"
+              href={socialLink.correo.url}
+              className="text-gray-400 hover:text-aurora-blue transition transform hover:scale-110"
             >
-              <FaTwitter size={28} />
+              <FaEnvelope size={28} />
             </a>
-            
           </div>
         </div>
       </div>

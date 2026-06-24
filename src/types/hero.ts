@@ -7,10 +7,10 @@ export interface HeroContent {
 }
 
 export interface HeroData {
-  name: string;      // Fijo
-  resumeUrl: string; // Fijo
-  es: HeroContent;   // Traducción español
-  en: HeroContent;   // Traducción inglés
+  name: string;
+  resumeUrl: string;
+  es: HeroContent;
+  en: HeroContent;
 }
 
 export interface SocialLink {

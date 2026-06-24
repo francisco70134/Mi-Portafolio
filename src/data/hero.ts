@@ -1,7 +1,7 @@
 import type { HeroData } from "../types";
 
 export const heroInfo: HeroData = {
-  // Datos que no necesitan traducción
+
   name: "Francisco",
   resumeUrl: "/cv-francisco.pdf",
 

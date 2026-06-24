@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Globe } from "lucide-react"; // <-- Añadimos el icono Globe
-import { useTranslation } from "react-i18next"; // <-- Importamos el hook
+import { Menu, X, Globe } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { Logo } from "./Logo";
-import { navLinks } from "../data"; // Seguiremos usando data para las rutas, pero el texto vendrá del traductor
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
