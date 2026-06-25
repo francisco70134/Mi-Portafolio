@@ -36,6 +36,8 @@ export const techStackData = {
     { name: "Next.js", icon: "nextjs", category: "frontend" },
     { name: "Vue.js", icon: "vue", category: "frontend" },
     { name: "Nuxt.js", icon: "nuxt", category: "frontend" },
+    { name: "Livewire", icon: "livewire", category: "frontend" },
+    { name: "Alpine", icon: "alpine", category: "frontend" },
     { name: "Astro", icon: "astro", category: "frontend" },
     { name: "Tailwind CSS", icon: "tailwind", category: "frontend" },
     { name: "Bootstrap", icon: "bootstrap", category: "frontend" },

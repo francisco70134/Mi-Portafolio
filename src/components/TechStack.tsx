@@ -11,7 +11,6 @@ import {
   FaVuejs,
   FaNodeJs,
   FaDocker,
-  FaLinux,
   FaFigma,
   FaWordpress,
   FaTrello,
@@ -25,6 +24,7 @@ import {
   FaProjectDiagram,
   FaCheckDouble,
   FaInfinity,
+  FaLaravel,
 } from "react-icons/fa";
 import {
   SiTypescript,
@@ -48,7 +48,6 @@ import {
   SiInsomnia,
   SiJira,
   /* SiPowerbi, */
-  SiLooker,
   /* SiMicrosoftexcel, */
   SiNotion,
   SiGit,
@@ -78,6 +77,18 @@ export const TechStack = () => {
         return <SiNextdotjs className="text-white text-4xl mb-2" />;
       case "vue":
         return <FaVuejs className="text-[#4FC08D] text-4xl mb-2" />;
+
+      case "livewire":
+        return <FaLaravel className="text-[#fb70a9] text-4xl mb-2" />; // O el icono que prefieras
+      case "alpine":
+        return (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/alpinejs/alpinejs-original.svg"
+            className="w-10 h-10 mb-2 drop-shadow-md"
+            alt="Alpine.js"
+          />
+        );
+
       case "astro":
         return <SiAstro className="text-[#FF5D01] text-4xl mb-2" />;
       case "tailwind":

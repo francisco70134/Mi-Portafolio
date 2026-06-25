@@ -11,7 +11,20 @@ export const educationInfo = {
         status: "Especialización",
         description:
           "Programa avanzado enfocado en el ecosistema empresarial de Java. Capacitación profunda en la creación de arquitecturas escalables, integración de sistemas y desarrollo backend robusto para entornos corporativos.",
-        skills: ["Java", "Spring Boot", "Arquitectura", "Backend"],
+        skills: [
+          "Java",
+          "Spring Boot",
+          "Spring Security",
+          "JWT",
+          "JPA/Hibernate",
+          "REST APIs",
+          "Arquitectura Hexagonal",
+          "SQL",
+          "Git",
+          "Docker",
+          "CI/CD",
+          "Jenkins",
+        ],
       },
       {
         title: "Ingeniería de Software",

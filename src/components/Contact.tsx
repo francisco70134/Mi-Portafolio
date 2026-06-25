@@ -1,10 +1,10 @@
-import { useState, useRef, type FormEvent } from "react";
+import { useState, useRef } from "react";
+import type { FormEvent } from "react";
 import emailjs from "@emailjs/browser";
 import {
   FaEnvelope,
   FaMapMarkerAlt,
   FaWhatsapp,
-  FaLinkedin,
   FaPaperPlane,
 } from "react-icons/fa";
 

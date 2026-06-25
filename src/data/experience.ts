@@ -18,7 +18,7 @@ export const experienceInfo = {
           "SQL",
           "JIRA",
           "Infraestructura",
-          "Networking",
+          "Network",
         ],
       },
       {
@@ -101,7 +101,7 @@ export const experienceInfo = {
           "SQL",
           "JIRA",
           "Infrastructure",
-          "Networking",
+          "Network",
         ],
       },
       {
