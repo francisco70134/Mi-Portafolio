@@ -3,7 +3,7 @@ import type { HeroData } from "../types";
 export const heroInfo: HeroData = {
 
   name: "Francisco",
-  resumeUrl: "/cv-francisco.pdf",
+  resumeUrl: "/docs/Francisco_Olortegui_CurriculumVitae_2026.pdf",
 
   // Datos en Español
   es: {

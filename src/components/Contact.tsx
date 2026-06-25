@@ -110,7 +110,7 @@ export const Contact = () => {
             </div>
           </div>
 
-          <div className="p-8 bg-dark-bg border border-aurora-purple-dark">
+          <div className="p-8 bg-dark-bg border border-aurora-purple-dark opacity-65">
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">

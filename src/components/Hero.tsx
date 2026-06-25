@@ -39,7 +39,8 @@ export const Hero = () => {
               {content.btnWork}
             </a>
             <a
-              href={heroInfo.resumeUrl}
+              href="/docs/Francisco_Olortegui_CurriculumVitae_2026.pdf"
+              download="Francisco_Olortegui_CurriculumVitae_2026.pdf"
               className="px-8 py-3 border border-aurora-purple rounded-full text-gray-300 hover:bg-aurora-purple hover:text-white transition-all transform hover:scale-105"
             >
               {content.btnResume}
