@@ -18,25 +18,20 @@ export const Education = () => {
 
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 animate-slide-up">
           <div className="flex-1 relative">
-            {/* Título del Nodo Raíz */}
             <h3 className="text-xl font-bold text-gray-300 mb-10 tracking-wide uppercase flex items-center">
               <span className="w-2 h-2 bg-aurora-purple rounded-full mr-3"></span>
               {content.educationTitle}
             </h3>
 
-            {/* Línea principal vertical (El "Tronco") */}
             <div className="absolute left-[3px] top-[40px] bottom-0 w-[2px] bg-[#23293b]"></div>
 
             <div className="space-y-16">
               {content.degrees.map((degree, idx) => (
                 <div key={idx} className="relative pl-8 md:pl-10 group">
-                  {/* El Nodo (Círculo) */}
                   <div className="absolute left-[-4px] top-1.5 w-4 h-4 bg-dark-bg border-2 border-aurora-purple rounded-full z-10 group-hover:bg-aurora-purple transition-colors duration-300"></div>
 
-                  {/* Línea horizontal de conexión (Rama) */}
                   <div className="absolute left-[3px] top-[13px] w-5 md:w-7 h-[2px] bg-[#23293b] group-hover:bg-aurora-purple transition-colors duration-300"></div>
 
-                  {/* Contenido Sin Fondo */}
                   <div>
                     <div className="flex flex-wrap items-baseline gap-3 mb-1">
                       <span className="text-sm font-mono text-aurora-purple-dark">
@@ -75,22 +70,18 @@ export const Education = () => {
           </div>
 
           <div className="flex-1 relative mt-12 lg:mt-0">
-            {/* Título del Nodo Raíz */}
             <h3 className="text-xl font-bold text-gray-300 mb-10 tracking-wide uppercase flex items-center">
               <span className="w-2 h-2 bg-aurora-blue rounded-full mr-3"></span>
               {content.certificationsTitle}
             </h3>
 
-            {/* Línea principal vertical (El "Tronco") */}
             <div className="absolute left-[3px] top-[40px] bottom-0 w-[2px] bg-[#23293b]"></div>
 
             <div className="space-y-10">
               {content.certifications.map((cert, idx) => (
                 <div key={idx} className="relative pl-8 md:pl-10 group">
-                  {/* El Nodo (Diamante/Cuadrado rotado para diferenciar de los estudios) */}
                   <div className="absolute left-[-3px] top-2 w-3 h-3 bg-dark-bg border-2 border-aurora-blue transform rotate-45 z-10 group-hover:bg-aurora-blue transition-colors duration-300"></div>
 
-                  {/* Línea horizontal de conexión*/}
                   <div className="absolute left-[3px] top-[13px] w-5 md:w-7 h-[2px] bg-[#23293b] group-hover:bg-aurora-blue transition-colors duration-300"></div>
 
                   <div>
