@@ -48,17 +48,19 @@ export const Projects = () => {
               className="group flex flex-col bg-dark-bg border border-[#23293b] hover:border-aurora-purple/50 transition-colors duration-300 overflow-hidden animate-slide-up"
             >
               <div className="relative h-56 overflow-hidden bg-[#10141e]">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src =
-                      "https://via.placeholder.com/600x400/10141e/23293b?text=Preview+No+Disponible";
-                  }}
-                />
-
-                <div className="absolute inset-0 bg-dark-bg/20 group-hover:bg-transparent transition-colors duration-300"></div>
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center">
+                    <span className="text-gray-500 font-mono">
+                      No Preview Available
+                    </span>
+                  </div>
+                )}
               </div>
 
               <div className="p-6 flex flex-col flex-grow">
