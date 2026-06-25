@@ -27,7 +27,7 @@ export const FloatingButtons = () => {
   return (
     <>
       <a
-        href="https://wa.me/51941795983"
+        href="https://wa.me/51941795983?text=Hola%20Francisco,%20he%20revisado%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20ponerme%20en%20contacto%20contigo."
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:scale-110 hover:bg-[#20bd5a] transition-all duration-300"

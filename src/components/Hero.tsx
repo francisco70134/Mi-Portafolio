@@ -51,18 +51,21 @@ export const Hero = () => {
             <a
               href={socialLink.github.url}
               className="text-gray-400 hover:text-aurora-purple transition transform hover:scale-110"
+              target="_blank"
             >
               <FaGithub size={28} />
             </a>
             <a
               href={socialLink.linkedin.url}
               className="text-gray-400 hover:text-aurora-blue transition transform hover:scale-110"
+              target="_blank"
             >
               <FaLinkedin size={28} />
             </a>
             <a
               href={socialLink.correo.url}
               className="text-gray-400 hover:text-aurora-blue transition transform hover:scale-110"
+              target="_blank"
             >
               <FaEnvelope size={28} />
             </a>

@@ -2,7 +2,6 @@ import { useTranslation } from "react-i18next";
 import { FaChevronRight } from "react-icons/fa";
 import { aboutInfo } from "../data";
 import profileImg from "../assets/img/CV_Profile.jpeg";
-import { TechStack } from "./TechStack";
 
 export const About = () => {
   const { i18n } = useTranslation();
@@ -61,13 +60,7 @@ export const About = () => {
           </div>
         </div>
 
-        <div className="max-w-5xl mx-auto border-t border-dark-border pt-12">
-          <h3 className="text-2xl font-bold text-white mb-4 text-center">
-            {currentLang === "es" ? "Mi Stack Tecnológico" : "My Tech Stack"}
-          </h3>
 
-          <TechStack />
-        </div>
       </div>
     </section>
   );

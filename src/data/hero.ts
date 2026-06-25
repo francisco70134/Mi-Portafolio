@@ -5,7 +5,6 @@ export const heroInfo: HeroData = {
   name: "Francisco",
   resumeUrl: "/docs/Francisco_Olortegui_CurriculumVitae_2026.pdf",
 
-  // Datos en Español
   es: {
     greeting: "Hola, soy",
     roles: [
@@ -20,7 +19,6 @@ export const heroInfo: HeroData = {
     btnResume: "Descargar CV",
   },
 
-  // Datos en Inglés
   en: {
     greeting: "Hi, I'm",
     roles: [
