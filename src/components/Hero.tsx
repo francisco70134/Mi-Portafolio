@@ -4,10 +4,8 @@ import { heroInfo } from "../data";
 import { socialLinks } from "../data/social";
 
 export const Hero = () => {
-  //Obtenemos el idioma actual
   const { i18n } = useTranslation();
 
-  //Extraemos la información correcta según el idioma
   const currentLang = (i18n.language || "es") as "es" | "en";
   const content = heroInfo[currentLang];
 
@@ -26,7 +24,6 @@ export const Hero = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 mb-8">
-            {/* Volvemos a unir el arreglo de roles con el separador */}
             {content.roles.join(" | ")}
           </p>
 
@@ -48,8 +45,6 @@ export const Hero = () => {
               {content.btnResume}
             </a>
           </div>
-
-          {/* Redes sociales */}
 
           <div className="mt-12 flex justify-center space-x-6">
             <a

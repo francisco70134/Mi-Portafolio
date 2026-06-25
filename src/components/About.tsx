@@ -12,9 +12,12 @@ export const About = () => {
   return (
     <section id="about" className="py-24 relative">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">
-          {content.title}
-        </h2>
+        <div className="mb-16 animate-slide-up flex flex-col items-center text-center">
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+            {content.title}
+          </h2>
+          <div className="w-20 h-1 bg-aurora-purple rounded-full"></div>
+        </div>
 
         <div className="max-w-6xl mx-auto grid lg:grid-cols-12 gap-12 items-center mb-16">
           <div className="lg:col-span-5 flex justify-center relative">
@@ -62,7 +65,6 @@ export const About = () => {
           <h3 className="text-2xl font-bold text-white mb-4 text-center">
             {currentLang === "es" ? "Mi Stack Tecnológico" : "My Tech Stack"}
           </h3>
-        
 
           <TechStack />
         </div>
